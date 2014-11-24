@@ -209,6 +209,7 @@ public class Spider implements Runnable, Task {
      * @see #addPipeline(us.codecraft.webmagic.pipeline.Pipeline)
      * @deprecated
      */
+    @Deprecated
     public Spider pipeline(Pipeline pipeline) {
         return addPipeline(pipeline);
     }
@@ -259,6 +260,7 @@ public class Spider implements Runnable, Task {
      * @see #setDownloader(us.codecraft.webmagic.downloader.Downloader)
      * @deprecated
      */
+    @Deprecated
     public Spider downloader(Downloader downloader) {
         return setDownloader(downloader);
     }
@@ -732,7 +734,8 @@ public class Spider implements Runnable, Task {
      *
      * @param emptySleepTime In MILLISECONDS.
      */
-    public void setEmptySleepTime(int emptySleepTime) {
+    public Spider setEmptySleepTime(int emptySleepTime) {
         this.emptySleepTime = emptySleepTime;
+        return this;
     }
 }
